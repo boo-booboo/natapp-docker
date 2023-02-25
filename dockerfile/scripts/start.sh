@@ -7,7 +7,7 @@ cp ./config.ini.template ./config.ini
 echo "authtoken=$NATAPP_AUTH_TOKEN" >> ./config.ini
 
 echo "start socat"
-nohup socat TCP4-LISTEN:22,reuseaddr,fork TCP4:$HOST_IP:22 > ./socat.log 2>&1 &
+nohup socat TCP4-LISTEN:22,reuseaddr,fork TCP4:$HOST_IP:$HOST_PORT > ./socat.log 2>&1 &
 
 echo "start java"
 cat /dev/null > "$LOG_FILE"
