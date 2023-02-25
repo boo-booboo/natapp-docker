@@ -1,0 +1,5 @@
+/dockerfile/.env
+/dockerfile/scripts/*.jar
+
+/mail-sender/target
+/mail-sender/*.iml
