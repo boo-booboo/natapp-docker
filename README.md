@@ -14,10 +14,9 @@ NATAPP免费TCP隧道的本机地址为**127.0.0.1**, 端口配置为**22**.
 
 ## 1. 编译jar
 
-直接执行build-jar.sh脚本,编译打包出jar文件,并放入dockerfile/scripts/路径
-
 ```shell
-sh build-jar.sh
+sudo docker-compose pull -f docker-compose-build.yml
+sudo docker-compose up -f docker-compose-build.yml
 ```
 
 ## 2. 配置环境参数
@@ -43,10 +42,10 @@ HOST_PORT=22
 
 ## 3. 执行docker-compose
 
-在路径dockerfile/下,执行docker-compose
+执行docker-compose
 
 ```shell
 # cd dockerfile
-
-sudo docker-compose up -d --build
+sudo docker-compose build
+sudo docker-compose up -d
 ```

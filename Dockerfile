@@ -8,8 +8,6 @@ WORKDIR /root
 RUN curl -o /root/natapp https://cdn.natapp.cn/assets/downloads/clients/2_3_9/natapp_linux_386/natapp?version=20220415
 RUN yum install -y socat java-17-openjdk
 
-COPY scripts/* /root/
-
 ENV MAIL_HOST=smtp.163.com
 ENV MAIL_PORT=465
 ENV MAIL_FROM=natapp_notify@163.com
@@ -21,4 +19,3 @@ ENV NATAPP_AUTH_TOKEN=##
 ENV HOST_IP=172.17.0.1
 ENV HOST_PORT=22
 
-ENTRYPOINT ["sh", "/root/start.sh"]
