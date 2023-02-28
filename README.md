@@ -15,8 +15,8 @@ NATAPP免费TCP隧道的本机地址为**127.0.0.1**, 端口配置为**22**.
 ## 1. 编译jar
 
 ```shell
-sudo docker-compose pull -f docker-compose-build.yml
-sudo docker-compose up -f docker-compose-build.yml
+sudo docker-compose -f docker-compose-build.yml pull
+sudo docker-compose -f docker-compose-build.yml up
 ```
 
 ## 2. 配置环境参数
