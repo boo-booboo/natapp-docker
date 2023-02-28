@@ -1,0 +1,11 @@
+version: "3.0"
+
+services:
+  build-mail-server:
+    image: maven:3.9.0-amazoncorretto-17
+    volumes:
+      - "./mail-sender:/root/mail-sender"
+    working_dir: "/root/mail-sender"
+    entrypoint:
+      - mvn
+      - package
